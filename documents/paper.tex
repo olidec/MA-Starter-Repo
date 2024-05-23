@@ -1,17 +1,14 @@
-% Im header stehen die Grundeinstellungen des Dokuments
-\documentclass[12pt,a4paper]{article} % 12 Punkte Schrift, A4 Papier
+% In the header are the basic settings of the document
+\documentclass[12pt,a4paper]{article} % 12-point font, A4 paper
 \usepackage[utf8]{inputenc} 
-\usepackage[ngerman]{babel} % Passt alle automatischen Texte an. 
-%\usepackage[english]{babel} % Diese Variante verwenden, fall man eine Arbeit auf Englisch schreibt.
+% \usepackage[ngerman]{babel} % Adjusts all automatic texts. 
+\usepackage[english]{babel} % Use this variant if you are writing a paper in English.
 
 \parindent=0cm
 \parskip=0.3cm
 \linespread{1.5}
 
-
-
-
-% Ein paar standard Pakete. Man muss genau wissen, wofür alle gebraucht werden...
+% A few standard packages. One must know exactly what they are needed for...
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -22,8 +19,7 @@
 
 \graphicspath{{images/}}
 
-
-% für Schachbretter
+% for chessboards
 % \usepackage{xskak,chessboard}
 
 \usepackage[
@@ -42,135 +38,102 @@
     eprint=false]{biblatex}
 \addbibresource{references/bibliography.bib}
 
-% Informationen für die Titelseite
-\title{Beispiel für eine Maturarbeit}
+% Information for the title page
+\title{Example for a Matura Thesis}
 \date{\today}
 \author{Susy Muster}
 
-
-
-
-% Der Anfang des Dokuments
+% The beginning of the document
 \begin{document}
 
-
-
-\maketitle % Hier wird die Titelseite mit den obigen Informationen eingefügt. Falls man eine "kunstvollere" Titelseite mit einem anderen Programm erstellen möchte, kann man sie hier einfügen. Dafür muss man die Titelseite im gleichen Verzeichnis (z.B. mit dem Namen TitelseiteMA2016.pdf) im pdf Format ablegen und mit dem Befehl
+\maketitle % Here the title page with the above information is inserted. If you want to create a more "artistic" title page with another program, you can insert it here. For this, you must place the title page in the same directory (e.g., named TitelseiteMA2016.pdf) in pdf format and it will be inserted with the command
 % \includepdf{TitelseiteMA2016}
-% wird sie dann eingefügt.
 
-
-
-
-
-
-
-
-
-
-
-\newpage % Eine neue Seite wird begonnen...
-\tableofcontents % Hier wird automatisch das Inhaltsverzeichnis eingefügt. Achtung: Änderungen werden erst nach dem zweiten kompilieren sichtbar.
-
-
-
-
-
-
-
-
-
-
+\newpage % A new page begins...
+\tableofcontents % Here the table of contents is automatically inserted. Note: Changes are only visible after the second compilation.
 
 \newpage
 
-\section{Struktur}
+\section{Structure}
 
-Ein Abschnitt wird mit diesem Befehl kreiert:
+A section is created with this command:
 \begin{verbatim}
-\section{Einleitung}
+\section{Introduction}
 \end{verbatim}
 
-Das sieht dann so aus:
+It looks like this:
 
-% Die Grundstruktur einer Arbeit:
-\section{Einleitung}
-Hier kommt text\ldots 
+% The basic structure of a paper:
+\section{Introduction}
+Here comes text\ldots 
 
-Unterabschnitte werden so dargestellt:
+Subsections are presented like this:
 
 \begin{verbatim}
-\subsection{Quellen und Zitate}
+\subsection{Sources and Citations}
 \end{verbatim}
 
-und sehen dann so aus:
+and look like this:
 
-\subsection{Quellen und Zitate}
+\subsection{Sources and Citations}
 
-% Mit einer Leerzeile wird ein neuer Abschnitt begonnen
+% A new paragraph begins with a blank line
 
+If you want to reference a source, use the \verb|\citet{}| or \verb|\citep{}| command \citep{example}. You can also cite a second source: “Life finds a way” \citep{buch2}.
 
-Wenn man auf eine Quelle verweisen möchte, verwendet man den \verb|\citet{}| oder \verb|\citep{}| Befehl \citep{example}. Man kann dann auch eine zweite Quelle zitieren: ``Life finds a way" \citep{buch2}.
-
-\citet{example} sagt \dots
-
+\citet{example} says \dots
 
 \newpage
 
+\section{Images}
 
-
-
-\section{Bilder}
-
-Bilder/Graphiken werden mit dem folgenden Befehl eingefügt:
+Images/graphics are inserted with the following command:
 
 \begin{verbatim}
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.5\textwidth]{star_wars.jpeg}
-\caption{Ein erstes Bild \cite{sw16}}
+\caption{A first image \cite{sw16}}
 \end{figure}
 \end{verbatim}
 
-Die \verb|figure| Umgebung zeichnet ein Bild, das \verb|[h]| heisst, dass die Graphik möglichst direkt hier im Text eingebettet werden soll.
+The \verb|figure| environment draws an image, \verb|[h]| means that the graphic should be embedded in the text as close as possible.
 
-Das sieht dann so aus:
+It looks like this:
 
-\begin{figure}[h] % Die "figure" Umgebung 
-\centering % Damit wird das Bild zentriert
-\includegraphics[width=0.5\textwidth]{star_wars.jpeg} % Hier wird ein Bild eingefügt, das im selben Verzeichnis abgelegt wurde. Es wird so vergrössert/verkleinert, dass es auf die halbe Textbreite passt.
-\caption{Ein erstes Bild \citep{star-wars}}
+\begin{figure}[h] % The "figure" environment 
+\centering % This centers the image
+\includegraphics[width=0.5\textwidth]{star_wars.jpeg} % Here an image is inserted, which is located in the same directory. It is resized to fit half the text width.
+\caption{A first image \citep{star-wars}}
 \end{figure}
 
-Bilder tauchen automatisch im Bildverzeichnis auf.
-
+Images automatically appear in the list of figures.
 
 \newpage
 
-% \section{Schachbretter}
-% Schachbretter mit bestimmten Positionen, können in der FEN Notation angegeben werden (Die Forsyth-Edwards-Notation (FEN) oder in der erweiterten Form (X-FEN) ist eine Kurznotation, mit der jede beliebige Brettstellung im Schach niedergeschrieben werden kann.\cite{fen-wiki}):
+% \section{Chessboards}
+% Chessboards with specific positions can be specified in the FEN notation (Forsyth-Edwards Notation (FEN) or in the extended form (X-FEN) is a short notation to describe any chess position. \cite{fen-wiki}):
 
 % \begin{verbatim}
 % \begin{figure}[h]
 % \centering
 % \chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
-% \caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
+% \caption{Checkmate! (Morphy vs. Karl von Braunschweig and Count Isoard, 1858)}
 % \end{figure}
 % \end{verbatim}
 
-% Das sieht dann so aus:
+% It looks like this:
 % \setchessboard{showmover=false}
 
-
 % \begin{figure}[h]
 % \centering
 % \chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
-% \caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
+% \caption{Checkmate! (Morphy vs. Karl von Braunschweig and Count Isoard, 1858)}
 % \end{figure}
 
 % \newpage
 
-% Züge können mit dem Befehl \verb|markmoves| eingezeichnet werden:
+% Moves can be drawn with the command \verb|markmoves|:
 
 % \begin{verbatim}
 % \begin{figure}[h]
@@ -187,7 +150,7 @@ Bilder tauchen automatisch im Bildverzeichnis auf.
 % color=red!80,
 % markmoves={b4-e1},
 % ]
-% \caption{Keine Rochaden sind möglich}
+% \caption{No castling possible}
 % \end{figure}
 % \end{verbatim}
 
@@ -205,73 +168,24 @@ Bilder tauchen automatisch im Bildverzeichnis auf.
 % color=red!80,
 % markmoves={b4-e1},
 % ]
-% \caption{Keine Rochaden sind möglich}
+% \caption{No castling possible}
 % \end{figure}
 
 % \newpage
 
-
-
-\section{Schlussfolgerungen}
+\section{Conclusions}
 \newpage
 
-
-
-
-% Hier beginnt der Anhang
+% Here begins the appendix
 \appendix
-\section{Anhang}
+\section{Appendix}
 \newpage
 
-
-
-
-
-\section{Bilderverzeichnis}
+\section{List of Figures}
 \listoffigures
-
-
 
 \newpage
 
 \printbibliography
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \end{document}
