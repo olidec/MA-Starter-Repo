@@ -24,7 +24,7 @@
 
 
 % für Schachbretter
-\usepackage{xskak,chessboard}
+% \usepackage{xskak,chessboard}
 
 \usepackage[
     backend=biber,
@@ -147,68 +147,68 @@ Bilder tauchen automatisch im Bildverzeichnis auf.
 
 \newpage
 
-\section{Schachbretter}
-Schachbretter mit bestimmten Positionen, können in der FEN Notation angegeben werden (Die Forsyth-Edwards-Notation (FEN) oder in der erweiterten Form (X-FEN) ist eine Kurznotation, mit der jede beliebige Brettstellung im Schach niedergeschrieben werden kann.\cite{fen-wiki}):
+% \section{Schachbretter}
+% Schachbretter mit bestimmten Positionen, können in der FEN Notation angegeben werden (Die Forsyth-Edwards-Notation (FEN) oder in der erweiterten Form (X-FEN) ist eine Kurznotation, mit der jede beliebige Brettstellung im Schach niedergeschrieben werden kann.\cite{fen-wiki}):
 
-\begin{verbatim}
-\begin{figure}[h]
-\centering
-\chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
-\caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
-\end{figure}
-\end{verbatim}
+% \begin{verbatim}
+% \begin{figure}[h]
+% \centering
+% \chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
+% \caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
+% \end{figure}
+% \end{verbatim}
 
-Das sieht dann so aus:
-\setchessboard{showmover=false}
+% Das sieht dann so aus:
+% \setchessboard{showmover=false}
 
 
-\begin{figure}[h]
-\centering
-\chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
-\caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \chessboard[setfen=1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17]
+% \caption{Schachmatt! (Morphy vs. Karl von Braunschweig und Graf Isoard, 1858)}
+% \end{figure}
 
-\newpage
+% \newpage
 
-Züge können mit dem Befehl \verb|markmoves| eingezeichnet werden:
+% Züge können mit dem Befehl \verb|markmoves| eingezeichnet werden:
 
-\begin{verbatim}
-\begin{figure}[h]
-\centering
-\chessboard[smallboard,
-setpieces={Ra1,Rh1,Ke1,ke8,rh8,ra8,Ne6,bb4},
-arrow=to,linewidth=0.2ex,
-pgfstyle=knightmove,
-shortenstart=0.4em,
-color=red!80,
-markmoves={e6-d8,e6-f8},
-pgfstyle=straightmove,
-shortenstart=0.4em,
-color=red!80,
-markmoves={b4-e1},
-]
-\caption{Keine Rochaden sind möglich}
-\end{figure}
-\end{verbatim}
+% \begin{verbatim}
+% \begin{figure}[h]
+% \centering
+% \chessboard[smallboard,
+% setpieces={Ra1,Rh1,Ke1,ke8,rh8,ra8,Ne6,bb4},
+% arrow=to,linewidth=0.2ex,
+% pgfstyle=knightmove,
+% shortenstart=0.4em,
+% color=red!80,
+% markmoves={e6-d8,e6-f8},
+% pgfstyle=straightmove,
+% shortenstart=0.4em,
+% color=red!80,
+% markmoves={b4-e1},
+% ]
+% \caption{Keine Rochaden sind möglich}
+% \end{figure}
+% \end{verbatim}
 
-\begin{figure}[h]
-\centering
-\chessboard[smallboard,
-setpieces={Ra1,Rh1,Ke1,ke8,rh8,ra8,Ne6,bb4},
-arrow=to,linewidth=0.2ex,
-pgfstyle=knightmove,
-shortenstart=0.4em,
-color=red!80,
-markmoves={e6-d8,e6-f8},
-pgfstyle=straightmove,
-shortenstart=0.4em,
-color=red!80,
-markmoves={b4-e1},
-]
-\caption{Keine Rochaden sind möglich}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \chessboard[smallboard,
+% setpieces={Ra1,Rh1,Ke1,ke8,rh8,ra8,Ne6,bb4},
+% arrow=to,linewidth=0.2ex,
+% pgfstyle=knightmove,
+% shortenstart=0.4em,
+% color=red!80,
+% markmoves={e6-d8,e6-f8},
+% pgfstyle=straightmove,
+% shortenstart=0.4em,
+% color=red!80,
+% markmoves={b4-e1},
+% ]
+% \caption{Keine Rochaden sind möglich}
+% \end{figure}
 
-\newpage
+% \newpage
 
 
 
