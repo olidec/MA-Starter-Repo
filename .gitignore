@@ -43,3 +43,4 @@ lancedb
 *.run.xml
 *.fls
 *.fdb_latexmk
+*.lof
