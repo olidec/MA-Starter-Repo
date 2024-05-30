@@ -1,0 +1,46 @@
+{
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/documents/out",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "quick",
+      "tools": ["latexmk"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%WORKSPACE_FOLDER%/documents/build",
+        "-pdflatex",
+        "%DOC%"
+      ],
+      "env": {
+        "TEXINPUTS": ".:%WORKSPACE_FOLDER%/documents/includes/:"
+      }
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "--input-directory=%WORKSPACE_FOLDER%/documents/build",
+        "%DOCFILE%"
+      ],
+      "env": {}
+    }
+  ],
+  "cSpell.language": "en,de-CH",
+  "cSpell.words": [
+    "Codeium",
+    "Isoard",
+    "markmoves",
+    "Maturarbeit",
+    "Rochaden",
+    "winget"
+  ]
+}
